@@ -83,6 +83,15 @@ var makeCounter = function() {
   After the function has been called N number of times, console.log('STAHHP');
 */
 
+var inner = outer(cb, n);
+
+inner(); //works
+inner(); //works
+inner(); //works
+inner(); //returns undefined
+
+
+
 var cb = function(y){
   console.log(y)
 };
