@@ -109,7 +109,7 @@ var funk = function (cb){
 
 var runIt = funk(cb, y);
 
-runIt(5);
+runIt(3);
 
 
 
