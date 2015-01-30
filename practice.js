@@ -52,6 +52,16 @@ var makeCounter = function() {
     }
   };
 
+  //or
+
+// var makeCounter = function() {
+//   var num = 0;
+//   return function(){
+//     return num ++;
+//     }
+//   };
+
+
 
   var count = makeCounter();
 
@@ -73,12 +83,25 @@ var makeCounter = function() {
   After the function has been called N number of times, console.log('STAHHP');
 */
 
-var moo = function(cb, N){
-  return function(){
-    for (var i = 0; i < 4; i++) {
-      return cb;
-    };
-  };
+var cb = function(y){
+  console.log(y)
 };
+
+var funk = function (cb){
+  var x = 0;
+  return function(y){
+    if(x < y){
+      for (var x = 0; x < y; x++) {
+        return cb(y)
+      }
+    }
+  }
+};
+
+var runIt = funk(cb, y);
+
+runIt(5);
+
+
 
 
